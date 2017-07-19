@@ -1,0 +1,55 @@
+1.make .vim directories
+sudo mkdir ~/.vim/bundle
+sudo mkdir ~/.vim/snippets
+sudo mkdir ~/.vim/colors
+
+2. Install vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+3. Intall atom-dark color scheme
+cd ~/.vim/colors
+wget https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark.vim
+
+4. Install linuxbrew (or homebrew if on mac)
+//this is for linuxbrew
+sudo mkdir /home/linuxbrew/.linuxbrew 
+sudo apt-get install build-essential curl file git python-setuptools ruby
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
+
+//mac
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+5. install ctags
+brew install ctags
+//after this run ctags -R in the project file your using to generate a ctag file (the file you want to search from)
+
+6. install php code sniffer and php code sniffer (for php qa tools)
+sudo pear install PHP_CodeSniffer
+sudo apt install phpmd
+
+7. install pip for coala instalation (required for syntax checking)
+sudo apt install python3-pip
+
+8. Install php-cs-fixer (https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+composer global require friendsofphp/php-cs-fixer
+(also had to set php-cs-fixer path in vimrc because it wasn't working globally so check that)
+
+9. Install Cmkae (autocompletion)
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev python3-dev
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
+10. install ternjs
+curl -sL https://raw.githubusercontent.com/egalpin/apt-vim/master/install.sh | sh
+apt-vim install -y https://github.com/ternjs/tern_for_vim.git
+
+11. Install JSHint 
+npm install -g jshint
+create .jshintrc file and add the following
+{
+  "esversion": 6
+}

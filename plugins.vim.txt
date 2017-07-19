@@ -1,0 +1,68 @@
+"-----------------------This file manages Vundle Plugins------------------ 
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"----------------------------Misc Plugins---------------------------
+Plugin 'skwp/greplace.vim'              " allows search and replace of terms in files
+Plugin 'garbas/vim-snipmate'            " alows use of snippet - defined in ~/.vim/snippets directory
+Plugin 'tomtom/checksyntax_vim'         "check syntax on save
+Plugin 'joonty/vdebug'                  "debugging for vim 
+Plugin 'nathanaelkane/vim-indent-guides' "indent guides
+Plugin 'gmist/vim-palette'              " package of color schemes
+Plugin 'terryma/vim-multiple-cursors'   "allows use of multiple cursors
+Plugin 'janko-m/vim-test'               "allows tests to run in vim
+Plugin 'danro/rename.vim'               "allows renaming of current file
+Plugin 'jiangmiao/auto-pairs'           "autocloses charactors that can be closed
+Plugin 'tpope/vim-surround'             "allows easy manipulation of outer brackets or quotes
+Plugin 'itchyny/lightline.vim'          "minimalist status line
+Plugin 'bling/vim-bufferline'           "allows open buffers to be seen in command line
+Plugin 'godlygeek/csapprox'             "allows gvim coloursin terminal vim
+Plugin 'ervandew/supertab'             "allows auto complete using tab
+
+"--------------------------------Git Plugins----------------------
+Plugin 'tpope/vim-fugitive'       "allow git commands to run from vim
+Plugin 'airblade/vim-gitgutter'    "Shows git additions / changes in left hand gutter
+
+"---------------------------PHP Plugins---------------------------
+Plugin 'joonty/vim-phpqa'               "detects errors in syntax
+Plugin '2072/php-indenting-for-vim'     " better indenting
+Plugin 'tobyS/vmustache'                "pdv dependancy
+Plugin 'tobyS/pdv'                      "auto generates doc blocks
+Plugin 'SirVer/ultisnips'               "pdv dependancy
+Plugin 'stephpy/vim-php-cs-fixer'      "allow psr2 formatting
+Plugin 'shawncplus/phpcomplete.vim'      "php complete
+Plugin 'StanAngeloff/php.vim'           "allows specific php syntax highlighting
+Plugin 'MarcWeber/vim-addon-mw-utils'   "php namespace dependancy
+Plugin 'tomtom/tlib_vim'                "php namespace dependancy
+Plugin 'lvht/phpcd.vim'                "php complete deamon
+Plugin 'arnaud-lb/vim-php-namespace'    "allows namespace of class to be added to top of file using
+
+"-------------------------Directory Plugins-----------------------
+Plugin 'duggiefresh/vim-easydir'        "allows you to easily create new directories
+Plugin 'VundleVim/Vundle.vim'           "allow vundle to be managed by vundle
+Plugin 'tpope/vim-vinegar'              "allows navigation of files using -
+Plugin 'scrooloose/nerdtree'            "allows file branch to be seen using CtrlZ (<C-Z> iscustom nmap)
+Plugin 'ctrlpvim/ctrlp.vim'             "allows searching of files using CtrlP
+Plugin 'rking/ag.vim'                   "allows searching of files using ag
+Plugin 'junegunn/fzf'                   "vim fuzzy finder
+Plugin 'majutsushi/tagbar'              "allows you to easily see classes and methods by diplaying tags in right hand window
+"-------------------------JavaScript Plugins-----------------------
+Plugin 'pangloss/vim-javascript'        "javaScript highlighting
+Plugin 'marijnh/tern'                  "makes YouCompleteMe Intelligent
+Plugin 'walm/jshint.vim'                  "detects errors in js code
+Plugin 'maksimr/vim-jsbeautify'         "allows jsbeautifyer to be used in vim
+Plugin 'jelera/vim-javascript-syntax'   "better syntax highlighting for js
+Plugin 'othree/yajs.vim'                " better js syntax recognition
+Plugin 'othree/javascript-libraries-syntax.vim' "js libraries syntax recognition
+Plugin 'ajh17/VimCompletesMe'           "vim auto completion
+Plugin 'mxw/vim-jsx'                    "vim syntax highlighting for jsx (react)
+
+"-------------------------HTML Plugins-----------------------
+Plugin 'othree/html5.vim'               "Provides omnicomplete for html5
+
+"All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+

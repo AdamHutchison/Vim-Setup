@@ -1,0 +1,63 @@
+=====================================================================================================================================================================
+                                                                           Vim Cheat Sheet
+=====================================================================================================================================================================
+
+--------------------------NERDTree-----------------------------
+1. <C-Z> toggles NERDTree on and off
+2. cd changes CWD to the one highlighted
+3. m opens the NERDTree menu
+4. ? opens help menu un NERDTree
+
+--------------------------------Git--------------------------------
+1. <leader>gs is git status
+2. <leader>gc is git commit
+3. <leader>gm is git merge
+4. <leader>gp is git pull
+5 <leader>gpp is git push
+
+--------------------------Parenthases--------------------------------
+1. delete inside {},"",'' or () - di then ppend {},"",'' or ()
+2. select inside {},"",'' or () - vi then append {},"",'' or ()
+3. delete all of {},"",'' or () - da then append {},"",'' or ()
+4. select all of {},"",'' or () - va then append {},"",'' or ()
+5. cs'" will change the ' surrounding a string to ". The same can be done with brackets
+6.yss) will wrap the entire line in () the same can be done with other brackets and quotes
+7. ysiw<em> will wrap the word you are hovering over in <em></em> tags. The same can be done for other html tags
+
+----------------------------PHP--------------------------------
+1. turn quality controll tests on or off <leader>qa
+2. insert phpdoc bloc - place cursor over class / function and hit <leader>d
+3. <leader>f launches php cs fixer (will put php into psr2 format)
+4. <leader>fd launches php cs fixer for whole directory
+5. <leader>n while over a class will add the namespace at the top of the file
+6 <leader>d whilst over a class will add a doc block above it
+
+----------------------------Laravel----------------------------------
+1. <leader>lm launches :! php artisan make: 
+2. <leader><leader>m goes to model directory
+3.<leader><leader>c goes to controllers directory
+4.<leader><leader>r goes to routes file
+5.<leader><leader>mi goes to migrations directory
+
+----------------------------JavaScript--------------------------------
+1. <C-H> calls JSHint
+2. <C-F> calls JS Beautify
+
+----------------------------Generic--------------------------------
+1. add multiple cursors - in visual mode press <C-N> to highlight current word
+2. then press iy again to move to next word <C-P> moves back then hit c to go
+3. to insert mode (deletes all of highhlight)
+4. open all folds zR and to close all folds zM
+5. <leader>f to search tags in normal mode
+5a <leader><leader><space> to toggle tagbar on and off (this allows you to easily see where classes and methods are defined)
+6. <tab>q will open autocomplete options
+7. toggle indent guides on or off <leader>ig
+8. <leader><leader>g to toggle gitgutter on and off
+9. <leader>cd will change current working directory to that of the open buffer
+10.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
+---------------------------------links-------------------------------
+1. http://vimcasts.org/episodes/
+     screencasts on vim
+2. http://vimawesome.com/
+     collection of vim plugins
+
