@@ -86,7 +86,7 @@ imap <leader>x <ESC>:q<cr>
 :nmap d' di'i
 "---------------------Git-Fugitive mapping------------------------"
 :nmap <leader>gs <ESC>:Gstatus<cr>
-:nmap <leader>gc <ESC>:Gcommit -v<cr>
+:nmap <leader>gc <ESC>:Gcommit -v<cr>i
 :nmap <leader>gm <ESC>:Gmerge<cr>
 :nmap <leader>gp <ESC>:Gpull<cr>
 :nmap <leader>gpp <ESC>:Gpush<cr>
