@@ -1,0 +1,78 @@
+
+snippet phpunit
+	class ${1} extends PHPUnit_Framework_TestCase
+	{
+		/**
+		*@test
+		*
+		*/
+		public function ${2}()
+		{
+			${3}
+		}
+	}
+
+snippet con
+	function	__construct(${1})
+	{
+		${2}
+	}
+snippet met 
+	public function ${2}()
+	{
+		${3}
+	}
+
+snippet metp
+	private function ${2}()
+	{
+		${3}
+	}
+
+snippet metpr
+	protected function ${2}()
+	{
+		${3}
+	}
+snippet meta
+	function (${2})
+	{
+		${3}
+	}
+
+snippet class
+	class ${2}
+	{
+		${3}
+	}
+snippet classe
+	class ${2} extends ${2}
+	{
+		${4}
+	}
+snippet classi
+	class ${2} implements ${2}
+	{
+		${4}
+	}
+snippet rget
+	Route::get('${2}','${2}Controller@${3}');
+snippet rpost
+	Route::post('${2}','${2}Controller@${3}');
+snippet rpatch
+	Route::patch('${2}','${2}Controller@${3})';
+snippet rput
+	Route::put('${2}','${2}Controller@${3}');
+snippet rdelete
+	Route::delete('${2}','${2}Controller@${3}');
+snippet if
+	if(${2})
+	{
+		${3}
+	}
+snippet doct
+	/**
+	*@test
+	*
+	*/
+
