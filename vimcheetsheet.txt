@@ -7,6 +7,8 @@
 2. cd changes CWD to the one highlighted
 3. m opens the NERDTree menu
 4. ? opens help menu un NERDTree
+5. a after NERDTree menu opens will allow you to create  directory or a file. If creating a diector then follow namw with /
+6. <leader>fi will open NERDTree and selectcreate new node
 
 --------------------------------Git--------------------------------
 1. <leader>gs is git status
@@ -55,6 +57,7 @@
 8. <leader><leader>g to toggle gitgutter on and off
 9. <leader>cd will change current working directory to that of the open buffer
 10.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
+
 ---------------------------------links-------------------------------
 1. http://vimcasts.org/episodes/
      screencasts on vim
