@@ -13,6 +13,12 @@ set softtabstop=5
 set shiftwidth=5
 set complete=.,w,b,u                         "searches current buffer, open buffers, unopenned bufferswhen using auto complete
 set updatetime=250                           "reduces default update time to 250ms which is better for git gutter plugin
+set ignorecase                               " ignore case when searching
+set smartcase                                " ignore case if search pattern is all lowercase,
+"Auto change directory to match current file <leader>cd
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+"Show (partial) command in the status line
+set showcmd
 "---------------------split settings------------------------
 "changes default mappings for switching between open splits
 nmap \<down> <C-W><C-J>
@@ -29,10 +35,12 @@ let g:phpqa_messdetector_autorun = 0
 let g:phpqa_codesniffer_autorun = 0
 
 "---------------------mappings------------------------"
+imap <Insert> <Nop>
+inoremap <S-Insert> <Insert>
 "makes it easy to edit .vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
 "shortcut to cheetsheet
-nmap <leader>cs :e ~/Documents/VimSetup/vimcheetsheet.txt<cr>
+nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheetsheet.txt<cr>
 "clear highlighting from search
 nmap <leader><space> :nohlsearch<cr>
 "allows easy navigation to snippets file
@@ -59,13 +67,14 @@ vmap <C-N> <ESC>:vsp<cr>
 imap <C-N> <ESC>:vsp<cr>
 "allows use of CtrlE to go to end of line in normal mode
 nmap <C-E> $i<right>
+"allows use of ,,b to select buffer to got to
+nmap <leader><leader>b <esc>:ls<cr>:b
 "allows ,f to be used to produce :tag which allows a tag search
 nmap <leader>s :tag<space>
 nmap <leader>x :q<cr>
 nmap <leader>b :bd<cr>
 imap <leader>x <ESC>:q<cr>
 :map <leader>z <ESC>:bd<cr>
-:map <leader>cd <ESC>:cd %:h<cr>
 "allow for easy deletion of content inside " ' { ( and [
 :nmap d9 di(i
 :nmap d{ di{i
@@ -73,6 +82,14 @@ imap <leader>x <ESC>:q<cr>
 :nmap d< di<i
 :nmap d2 di"i
 :nmap d' di'i
+"---------------------Git-Fugitive mapping------------------------"
+:nmap <leader>gs <ESC>:Gstatus<cr>
+:nmap <leader>gc <ESC>:Gcommit -v<cr>
+:nmap <leader>gm <ESC>:Gmerge<cr>
+:nmap <leader>gp <ESC>:Gpull<cr>
+:nmap <leader>gpp <ESC>:Gpush<cr>
+:nmap <leader>ga <ESC>:Git add %:p<cr>
+
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -112,6 +129,9 @@ nmap <leader><leader>c :e app/Http/Controllers/<cr>
 nmap <leader><leader>v :e resources/views/<cr>
 "allows use of ,,m to go to app directory (for Models)
 nmap <leader><leader>m :e app<cr>
+"allows use of ,,mi to open migrations
+nmap <leader><leader>mi :e database/migrations/<cr>
+" Concept - load underlying class for Laravel
 
 "---------------------Visual-settings------------------------"
 colorscheme atom-dark         "set color scheme
@@ -124,6 +144,7 @@ set guioptions -=e
 set linespace=13              "sets line spacing in gvim
 hi LineNr guibg=bg
 hi vertsplit guifg=bg guibg=bg
+set guicursor=i-n-v:ver25-iCursor
 "---------------------lightline settigns------------------------"
 set laststatus=2
 set noshowmode
@@ -145,6 +166,7 @@ augroup END
 "--------------------NERDTree------------------"
 let NERDTreeHijackNetrw=0          "prevents NERDTree from using - as default
 nmap <C-Z> :NERDTreeToggle<cr>     
+nmap <leader>fi <esc>,cd:NERDTreeToggle<cr>ma
 "--------------------Ag search settings-----------------"
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
@@ -177,7 +199,7 @@ nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 "-----------------------------Vim-Airline---------------------------------
 let g:airline#extensions#tabline#enabled = 1
 "-----------------------------vim complete me settings---------------------------------
-:imap <tab>q <C-X><C-O>
+":imap <tab>q <C-X><C-O>
 autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
 "-----------------------------vim jsx settings---------------------------------
 let g:jsx_ext_required = 0
