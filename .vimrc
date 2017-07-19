@@ -15,6 +15,8 @@ set complete=.,w,b,u                         "searches current buffer, open buff
 set updatetime=250                           "reduces default update time to 250ms which is better for git gutter plugin
 set ignorecase                               " ignore case when searching
 set smartcase                                " ignore case if search pattern is all lowercase,
+set autoindent                               " always set autoindenting on
+set copyindent                               " copy the previous indentation on autoindenting
 "Auto change directory to match current file <leader>cd
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 "Show (partial) command in the status line
@@ -89,7 +91,7 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>gp <ESC>:Gpull<cr>
 :nmap <leader>gpp <ESC>:Gpush<cr>
 :nmap <leader>ga <ESC>:Git add %:p<cr>
-
+:nmap <leader>gg <ESC>:Git<space>
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -123,7 +125,7 @@ nmap <leader><leader>s :cd /home/adam/Sites/
 nmap <leader>lm :! php artisan make:
 "allows use of ,,r to go to routes file
 nmap <leader><leader>r :e routes/web.php<cr>
-"allows use of ,,c to go straigt to controller directory
+",zallows use of ,,c to go straigt to controller directory
 nmap <leader><leader>c :e app/Http/Controllers/<cr>
 "allows use of ,,v to g to views directory
 nmap <leader><leader>v :e resources/views/<cr>
@@ -134,6 +136,7 @@ nmap <leader><leader>mi :e database/migrations/<cr>
 " Concept - load underlying class for Laravel
 
 "---------------------Visual-settings------------------------"
+
 colorscheme atom-dark         "set color scheme
 set t_CO=258
 set guioptions -=m            "removes menu in gvim

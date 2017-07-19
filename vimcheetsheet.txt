@@ -1,6 +1,6 @@
-=====================================================================================================================================================================
+====================================================================================================================================================================
                                                                            Vim Cheat Sheet
-=====================================================================================================================================================================
+====================================================================================================================================================================
 
 --------------------------NERDTree-----------------------------
 1. <C-Z> toggles NERDTree on and off
@@ -16,7 +16,8 @@
 3. <leader>gm is git merge
 4. <leader>gp is git pull
 5 <leader>gpp is git push
-
+6.<leader>ga with add current file
+7.<leader>gg will summon command :Git 
 --------------------------Parenthases--------------------------------
 1. delete inside {},"",'' or () - di then ppend {},"",'' or ()
 2. select inside {},"",'' or () - vi then append {},"",'' or ()
@@ -55,8 +56,11 @@
 6. <tab>q will open autocomplete options
 7. toggle indent guides on or off <leader>ig
 8. <leader><leader>g to toggle gitgutter on and off
-9. <leader>cd will change current working directory to that of the open buffer
-10.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
+
+---------------------------------Files and Directories------------------------------
+1. <leader>cd will change current working directory to that of the open buffer
+2.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
+3. :Rename followed by the new file namewill rename the current file 
 
 ---------------------------------links-------------------------------
 1. http://vimcasts.org/episodes/
