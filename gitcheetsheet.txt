@@ -1,0 +1,41 @@
+======================================================================================================================================================================                                                                          Git Cheet Sheet
+======================================================================================================================================================================
+
+------------------------------------------Push to Github repository------------------------------------
+*********run the following commands but replace <github repo> with the urlof your github repository*******
+1. git init
+2. git commit -m"initial commit"
+3. git remote add origin <github repo>
+4. git push -u origin master
+********NOTE***********
+If you already have an initialised repository then just run commands 3 and 4
+
+-----------------------------------------------Basic Commands------------------------------------------
+1. Git add <file> --> will add the changes made to <file> to the stck ready to be commited
+2. Git commit -m"<message goes here> " --> will commit the changes which have been added to the stack
+3. Git status --> gives the stutus of the currently selected branch
+4. Git status --<file> --> will remove the changes to <file> if they have not yet been commited
+5. Git log --> will show the commits to a branch
+6. Git init --> will initialise a new git repository
+
+-----------------------------------------------Git Stash--------------------------------------------
+1. Git stash --> will save the current file changes after git add . has run but without commiting them
+2. Git stash list --> will show all save points for that branch
+3. Git stash apply stash@{stash_id} --> will resume the specified file stash (return file to where i was when stashed). Stash will remain on list
+4. Git stash pop stash@{stash_id} --> will resume the specified file stash and remove it from stash lis
+5. Git stash apply --> will resume all file stashes (return files to where they were when stashed). Stash list will not be changed
+6. Git stash pop --> will resume all file stashes and remove them from the stash list
+7. Git stash drop stash@{stash_id} --> will drop the specified stash
+8. Git stash drop --> will drop all stashes
+9. Git stash branch <name_of_new_branch> --> will create a new branch with the stash list of current branch
+
+-----------------------------------------------Git Branching--------------------------------------------
+1. Git checkout -b <branchName> --> will create a new branch
+2. Git checkout <branchName> --> will change the branch
+3. Git merge <branchName> --> will merge <branchName> with master (must be currently on master branch)
+4. Git branch -d <branchName> --> will delete the <branchName> branch (this should be done after a git merge)
+
+-------------------------------------------------Git reset----------------------------------------------
+1. Git reset --soft <commit hash> --> will reset the branch to the commit of the supplied hash (gained from doing git log), has no effect on index or working tree
+2. Git reset --hard <commit hash> --> WARNING! this will revert all files back to how they were when the commit with the hash <commit hash> was done
+
