@@ -9,7 +9,7 @@
 5. gaa = git add --all
 6. gs = git status
 7. glg = git log --stat
-8.gcb = git checkout -b
+8. gcb = git checkout -b
 9. glgga = git log --graph --decorate --all
 
 ------------------------------------------Push to Github repository------------------------------------

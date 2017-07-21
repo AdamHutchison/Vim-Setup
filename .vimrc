@@ -93,6 +93,8 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>ga <ESC>:Git add %:p<cr>
 :nmap <leader>gaa <ESC>:Git add .<cr>
 :nmap <leader>gg <ESC>:Git<space>
+:nmap <leader>gb <ESC>:Git checkout -b<space>
+:nmap <leader>gl <ESC>:Git log --graph --decorate --all<cr>
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -148,7 +150,6 @@ set guioptions -=e
 set linespace=13              "sets line spacing in gvim
 hi LineNr guibg=bg
 hi vertsplit guifg=bg guibg=bg
-set guicursor=i-n-v:ver25-iCursor
 "---------------------lightline settigns------------------------"
 set laststatus=2
 set noshowmode
