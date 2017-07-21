@@ -36,13 +36,15 @@ let g:phpqa_messdetector_autorun = 0
 " Don't run codesniffer on save (default = 1)
 let g:phpqa_codesniffer_autorun = 0
 
+"---------------------Cheet Sheet Mappings------------------------"
+nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheatsheet.txt<cr>
+nmap <leader>cg :e ~/Documents/Vim-Setup/gitcheatsheet.txt<cr>
+
 "---------------------mappings------------------------"
 imap <Insert> <Nop>
 inoremap <S-Insert> <Insert>
 "makes it easy to edit .vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
-"shortcut to cheetsheet
-nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheetsheet.txt<cr>
 "clear highlighting from search
 nmap <leader><space> :nohlsearch<cr>
 "allows easy navigation to snippets file

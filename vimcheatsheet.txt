@@ -67,7 +67,7 @@
 1. <leader>cd will change current working directory to that of the open buffer
 2.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
 3. :Rename followed by the new file namewill rename the current file 
-
+4.<leader><leader><space> will toggle the tagbar on and off, this allows you to easily see where functions and methods are defined in code 
 ---------------------------------links-------------------------------
 1. http://vimcasts.org/episodes/
      screencasts on vim

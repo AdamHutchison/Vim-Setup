@@ -11,7 +11,7 @@
 7. glg = git log --stat
 8. gcb = git checkout -b
 9. glgga = git log --graph --decorate --all
-10. gvm = git checkout master
+10. gcm = git checkout master
 ------------------------------------------Push to Github repository------------------------------------
 *********run the following commands but replace <github repo> with the urlof your github repository*******
 1. git init
