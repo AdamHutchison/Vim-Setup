@@ -22,6 +22,8 @@
 9. <leader>gaa will add all files is repository
 10. <leader>gb <branchName> will create a new branch
 11. <leader>gl will open git log
+12. <leader>gll will give a list of commits that effect the current file
+
 --------------------------Parenthases--------------------------------
 1. delete inside {},"",'' or () - di then ppend {},"",'' or ()
 2. select inside {},"",'' or () - vi then append {},"",'' or ()
