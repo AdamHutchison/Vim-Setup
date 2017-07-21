@@ -4,12 +4,13 @@
 ------------------------------------------Aliases------------------------------------
 1. gcmsg = git commit -m
 2. gl = git pull
-3. ga = git add
-4. gaa = git add --all
-5. gs = git status
-6. glg = git log --stat
-7.gcb = git checkout -b
-8. glgga = git log --graph --decorate --all
+3. gp = git push
+4. ga = git add
+5. gaa = git add --all
+6. gs = git status
+7. glg = git log --stat
+8.gcb = git checkout -b
+9. glgga = git log --graph --decorate --all
 
 ------------------------------------------Push to Github repository------------------------------------
 *********run the following commands but replace <github repo> with the urlof your github repository*******
@@ -44,7 +45,7 @@ If you already have an initialised repository then just run commands 3 and 4
 2. Git checkout <branchName> --> will change the branch
 3. Git merge <branchName> --> will merge <branchName> with master (must be currently on master branch)
 4. Git branch -d <branchName> --> will delete the <branchName> branch (this should be done after a git merge)
-
+5. Git branch will show a list of branches that current exist
 -------------------------------------------------Git reset----------------------------------------------
 1. Git reset --soft <commit hash> --> will reset the branch to the commit of the supplied hash (gained from doing git log), has no effect on index or working tree
 2. Git reset --hard <commit hash> --> WARNING! this will revert all files back to how they were when the commit with the hash <commit hash> was done
