@@ -98,6 +98,7 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>gb <ESC>:Git checkout -b<space>
 :nmap <leader>gl <ESC>:GV --graph --decorate --all<cr>
 :nmap <leader>gll <ESC>:GV! --graph --decorate --all<cr>
+:nmap <leader>gbb <ESC>:Git checkout<space>
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
