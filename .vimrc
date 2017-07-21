@@ -36,13 +36,15 @@ let g:phpqa_messdetector_autorun = 0
 " Don't run codesniffer on save (default = 1)
 let g:phpqa_codesniffer_autorun = 0
 
+"---------------------Cheet Sheet Mappings------------------------"
+nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheatsheet.txt<cr>
+nmap <leader>cg :e ~/Documents/Vim-Setup/gitcheatsheet.txt<cr>
+
 "---------------------mappings------------------------"
 imap <Insert> <Nop>
 inoremap <S-Insert> <Insert>
 "makes it easy to edit .vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
-"shortcut to cheetsheet
-nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheetsheet.txt<cr>
 "clear highlighting from search
 nmap <leader><space> :nohlsearch<cr>
 "allows easy navigation to snippets file
@@ -96,11 +98,14 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>gb <ESC>:Git checkout -b<space>
 :nmap <leader>gl <ESC>:GV --graph --decorate --all<cr>
 :nmap <leader>gll <ESC>:GV! --graph --decorate --all<cr>
+:nmap <leader>gbb <ESC>:Git checkout<space>
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
+:nmap <leader>gbb <ESC>:Git checkout<space>
+:nmap <leader>gbb <ESC>:Git checkout<space>
 nmap <silent> <leader>g :TestVisit<CR>
 "--------------------JSHint Mappings------------------------"
 :map <C-H> <ESC>:JSHint<cr>
