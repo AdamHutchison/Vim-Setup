@@ -18,6 +18,8 @@
 5 <leader>gpp is git push
 6.<leader>ga with add current file
 7.<leader>gg will summon command :Git 
+8. <leader><leader>g will toggle the gitgutter on and off
+9. <leader>gaa will add all files is repository
 --------------------------Parenthases--------------------------------
 1. delete inside {},"",'' or () - di then ppend {},"",'' or ()
 2. select inside {},"",'' or () - vi then append {},"",'' or ()

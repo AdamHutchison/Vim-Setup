@@ -34,8 +34,8 @@ If you already have an initialised repository then just run commands 3 and 4
 2. Git stash list --> will show all save points for that branch
 3. Git stash apply stash@{stash_id} --> will resume the specified file stash (return file to where i was when stashed). Stash will remain on list
 4. Git stash pop stash@{stash_id} --> will resume the specified file stash and remove it from stash lis
-5. Git stash apply --> will resume all file stashes (return files to where they were when stashed). Stash list will not be changed
-6. Git stash pop --> will resume all file stashes and remove them from the stash list
+5. Git stash apply --> will resume most recent file stash (return file to where it was when stashed). Stash list will not be changed
+6. Git stash pop --> will resume most recent file stash and remove it from the stash list
 7. Git stash drop stash@{stash_id} --> will drop the specified stash
 8. Git stash drop --> will drop all stashes
 9. Git stash branch <name_of_new_branch> --> will create a new branch with the stash list of current branch

@@ -53,3 +53,11 @@ create .jshintrc file and add the following
 {
   "esversion": 6
 }
+
+12. Create gloabal .gitignore file so we can preven vim .swp files and temp files from being committed
+git config --global core.excludesfile ~/.gitignore
+-create .gitignore file in home directory
+-copy and paste the following
+*.swp
+*.swo
+*~

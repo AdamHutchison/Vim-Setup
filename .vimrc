@@ -91,6 +91,7 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>gp <ESC>:Gpull<cr>
 :nmap <leader>gpp <ESC>:Gpush<cr>
 :nmap <leader>ga <ESC>:Git add %:p<cr>
+:nmap <leader>gaa <ESC>:Git add .<cr>
 :nmap <leader>gg <ESC>:Git<space>
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
