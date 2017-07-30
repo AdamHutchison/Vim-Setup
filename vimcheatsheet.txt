@@ -8,8 +8,13 @@
 3. m opens the NERDTree menu
 4. ? opens help menu un NERDTree
 5. a after NERDTree menu opens will allow you to create  directory or a file. If creating a diector then follow namw with /
-6. <leader>fi will open NERDTree and selectcreate new node
 
+--------------------------------Vinegar--------------------------------
+1. Pressing d when in file browser mode will allow the creation of a new directory
+2. Pressing gh toggles the hiding of .files
+3. Pressing i toggles different view modes (i.e. can see ../ and ./ etc)
+4. Pressing . ontop of a file/directory will prepopulate the command line the directory/file
+5.
 --------------------------------Git--------------------------------
 1. <leader>gs is git status
 2. <leader>gc is git commit
@@ -21,6 +26,7 @@
 8. <leader><leader>g will toggle the gitgutter on and off
 9. <leader>gaa will add all files is repository
 10. <leader>gb <branchName> will create a new branch
+11. <leader>gbb will launch :Git checkout in the command line
 11. <leader>gl will open git log
 12. <leader>gll will give a list of commits that effect the current file
 
@@ -68,6 +74,7 @@
 2.<leader><leader>b will open a list of open buffers and type :b into command line. Just eneter number of buffer to got to it
 3. :Rename followed by the new file namewill rename the current file 
 4.<leader><leader><space> will toggle the tagbar on and off, this allows you to easily see where functions and methods are defined in code 
+. <leader><leader>n will populate the command line with :new which allows you to easily create new files/direcories
 ---------------------------------links-------------------------------
 1. http://vimcasts.org/episodes/
      screencasts on vim
