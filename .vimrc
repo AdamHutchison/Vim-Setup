@@ -1,6 +1,7 @@
 set nocompatible
 so ~/.vim/plugins.vim                         "sourcing a seperate plugins.vim file for plugins installed using vundle
 syntax enable                                 "enable syntax highlighting
+set clipboard=unnamedplus                     "use system clipboard as default
 set backspace=indent,eol,start                "allowing delete to function normally
 let mapleader=','                             "changing <leader> from / to ,
 set number                                    "set line numbers
@@ -41,7 +42,12 @@ nmap <leader>cs :e ~/Documents/Vim-Setup/vimcheatsheet.txt<cr>
 nmap <leader>cg :e ~/Documents/Vim-Setup/gitcheatsheet.txt<cr>
 
 "---------------------mappings------------------------"
+"easily bring up todo list
+nmap job :e ~/Documents/todo.txt<cr>
+"prevent replace mode opening in insert mode
 imap <Insert> <Nop>
+"easily create new files or directories
+nmap <leader><leader>n <esc>:new<space>
 inoremap <S-Insert> <Insert>
 "makes it easy to edit .vimrc
 nmap <leader>ev :e $MYVIMRC<CR>
@@ -69,11 +75,17 @@ nmap <C-N> :vsp<cr>
 vmap <C-N> <ESC>:vsp<cr>
 "allows CtrlN to bring up new vertical split in insert mode
 imap <C-N> <ESC>:vsp<cr>
+"allows use of CtrlE to go to end of line in insert mode
+imap <C-E> <esc>$i<right>
 "allows use of CtrlE to go to end of line in normal mode
 nmap <C-E> $i<right>
+"allows you to move easily to start of line in insert mode
+imap <c-i> <esc>I
+"allows you to move easily to start of line in insert mode
+nmap <c-i> <esc>I
 "allows use of ,,b to select buffer to got to
 nmap <leader><leader>b <esc>:ls<cr>:b
-"allows ,f to be used to produce :tag which allows a tag search
+"allows ,s to be used to produce :tag which allows a tag search
 nmap <leader>s :tag<space>
 nmap <leader>x :q<cr>
 nmap <leader>b :bd<cr>
@@ -89,7 +101,7 @@ imap <leader>x <ESC>:q<cr>
 "---------------------Git-Fugitive mapping------------------------"
 :nmap <leader>gs <ESC>:Gstatus<cr>
 :nmap <leader>gc <ESC>:Gcommit -v<cr>i
-:nmap <leader>gm <ESC>:Gmerge<cr>
+:nmap <leader>gm <ESC>:Gmerge
 :nmap <leader>gp <ESC>:Gpull<cr>
 :nmap <leader>gpp <ESC>:Gpush<cr>
 :nmap <leader>ga <ESC>:Git add %:p<cr>
@@ -99,13 +111,12 @@ imap <leader>x <ESC>:q<cr>
 :nmap <leader>gl <ESC>:GV --graph --decorate --all<cr>
 :nmap <leader>gll <ESC>:GV! --graph --decorate --all<cr>
 :nmap <leader>gbb <ESC>:Git checkout<space>
+
 "---------------------Test mapping------------------------"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
-:nmap <leader>gbb <ESC>:Git checkout<space>
-:nmap <leader>gbb <ESC>:Git checkout<space>
 nmap <silent> <leader>g :TestVisit<CR>
 "--------------------JSHint Mappings------------------------"
 :map <C-H> <ESC>:JSHint<cr>
@@ -163,9 +174,10 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-
 "---------------------vim-airline------------------------"
 let g:airline_theme='minimalist'   "sets theme for vim-airline plugin
+
+let g:airline_extensions = ['branch']
 "---------------------search------------------------"
 set hlsearch
 set incsearch
@@ -177,7 +189,6 @@ augroup END
 "--------------------NERDTree------------------"
 let NERDTreeHijackNetrw=0          "prevents NERDTree from using - as default
 nmap <C-Z> :NERDTreeToggle<cr>     
-nmap <leader>fi <esc>,cd:NERDTreeToggle<cr>ma
 "--------------------Ag search settings-----------------"
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
@@ -225,5 +236,6 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 "-----------------------------Git Gutter Mappings---------------------------------
 :map <leader><leader>g :GitGutterToggle<cr>
-"-----------------------------Git Gutter Mappings---------------------------------
+"-----------------------------Tag bar mappings---------------------------------
 nmap <leader><leader><space> :TagbarToggle<CR>
+
