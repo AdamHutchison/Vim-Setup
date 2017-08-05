@@ -2,6 +2,11 @@
                                                                            Vim Cheat Sheet
 ====================================================================================================================================================================
 
+--------------------------Ag and greplace-----------------------------
+1. :Ag "search term" will search for search term in present directory
+2. :Gsearch then enter search term then you will be asked for directories to search enter * for all or a specific directory followed be /* e.g. app/*
+3. one all occuence are up select the lines to change then press :s/term_to_change/term_to_cange_to will change the term_to_change to the term_to_change_to
+
 --------------------------NERDTree-----------------------------
 1. <C-Z> toggles NERDTree on and off
 2. cd changes CWD to the one highlighted
